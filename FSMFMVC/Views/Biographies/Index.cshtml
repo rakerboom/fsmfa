@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FSMFMVC.Models.Biography>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Biographies of our 2015 Adjudicators</h2>
+
+@foreach (var item in Model)
+{
+    <div class="media">
+        <div class="media-left">
+            <a href="@Url.Action("Details", "Biographies", new { id = item.ID })">
+                <img class="media-object" src="/Images/Biography/@Html.DisplayFor(modelItem => item.ImagePath)" alt="@Html.DisplayFor(modelItem => item.ImagePath)">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">@Html.DisplayFor(modelItem => item.Title)</h4>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        </div>
+    </div>
+}

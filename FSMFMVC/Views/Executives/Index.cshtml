@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FSMFMVC.Models.Executive>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Meet Our Executive</h2>
+
+<h3>The Fort Saskatchewan Music Festival is run entirely by volunteers. </h3>
+
+@foreach (var item in Model)
+{
+    <div class="media">
+        <div class="media-left">
+            <a href="@Url.Action("Details", "Executives", new { id = item.ID })">
+                <img class="media-object" src="/Images/Executive/@Html.DisplayFor(modelItem => item.ImagePath)" alt="@Html.DisplayFor(modelItem => item.ImagePath)">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">@Html.DisplayFor(modelItem => item.Title)</h4>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        </div>
+    </div>
+}

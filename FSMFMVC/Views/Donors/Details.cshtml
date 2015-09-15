@@ -1,0 +1,24 @@
+﻿@model FSMFMVC.Models.Donor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Donor Recognition Level</h2>
+
+<div class="media">
+    <div class="media-left">
+        <a href="#">
+            <img class="media-object" src="/Images/Donor/@Html.DisplayFor(model => model.ImagePath)" alt="@Html.DisplayFor(model => model.ImagePath)">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">@Html.DisplayFor(model => model.Title)</h4>
+        <p>@Html.DisplayFor(model => model.Description)</p>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<p><a href="https://www.canadahelps.org/CharityProfilePage.aspx?charityID=s19061" target="_blank" class="userlink"><img src="/Images/CanadaHelps.png" alt="Canada Helps" width="250" height="110" singleimage="true" style="clear:both;display:block;height:110px;margin:0px auto 10px auto;text-align:center;width:250px;"></a></p>
