@@ -1,0 +1,267 @@
+﻿@model FSMFMVC.Models.Entrant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Entrant</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SchoolAttending)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SchoolAttending)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GradeInSchool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GradeInSchool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GradeInMusic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GradeInMusic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+    </dl>
+    <h4>ENTRANT’S CLASS INFORMATION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instruments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instruments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Selection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Selection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerformanceTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerformanceTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfParicipants)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfParicipants)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParicipantsNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParicipantsNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameofAccompanist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameofAccompanist)
+        </dd>
+    </dl>
+    <h4>MUSIC SUPERVISOR, CONDUCTOR OR TEACHER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicSupervisorsFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicSupervisorsFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicSupervisorsLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicSupervisorsLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicSupervisorsPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicSupervisorsPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicSupervisorsAlternatePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicSupervisorsAlternatePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MusicSupervisorsEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MusicSupervisorsEmail)
+        </dd>
+
+    </dl>
+    <h4>PARENT VOLUNTEER INFORMATION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VolunteerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VolunteerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VolunteerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VolunteerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VolunteerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VolunteerPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialRequests)
+        </dt>
+
+    </dl>
+    <h4>SPECIAL REQUESTS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialRequests)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -3,12 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Fort Sask. Music Festival</title>
+    <title>@ViewBag.Title - Fort Sask. Music Festival Association</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
+    <div class="header-wrapper hidden-xs">
+            <img src="~/Images/logoFull.jpg" alt="Fort Saskatchewan Music Festival Association">
+    </div>
     <div class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
@@ -17,15 +20,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="hidden-xs">
+                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="hidden-md hidden-sm hidden-lg">
+                    @Html.ActionLink("Fort Saskatchewan Music Festival Association", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Biographies", "Index", "Biographies")</li>
+                    <li>@Html.ActionLink("Adjudicators", "Index", "Biographies")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Meet Our Executive", "Index", "Executives")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Donor Recongnition", "Index", "Donors")</li>
+                    <li>@Html.ActionLink("Donor Recognition", "Index", "Donors")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

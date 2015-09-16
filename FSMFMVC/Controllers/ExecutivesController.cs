@@ -12,7 +12,7 @@ namespace FSMFMVC.Controllers
 {
     public class ExecutivesController : Controller
     {
-        private MusicFestivalDBContext db = new MusicFestivalDBContext();
+        private StaticDataDBContext db = new StaticDataDBContext();
 
         // GET: Executives
         public ActionResult Index()

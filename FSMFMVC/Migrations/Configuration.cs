@@ -1,26 +1,23 @@
 namespace FSMFMVC.Migrations
 {
     using Models;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FSMFMVC.Models.MusicFestivalDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<FSMFMVC.Models.StaticDataDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(FSMFMVC.Models.MusicFestivalDBContext context)
+        protected override void Seed(FSMFMVC.Models.StaticDataDBContext context)
         {
             getBiograhies(context);
             getExecutive(context);
             getDonors(context);
         }
 
-        private static void getBiograhies(MusicFestivalDBContext context)
+        private static void getBiograhies(StaticDataDBContext context)
         {
             context.Biographies.AddOrUpdate(i => i.Title,
                 new Biography
@@ -61,7 +58,7 @@ namespace FSMFMVC.Migrations
             );
         }
 
-        private static void getExecutive(MusicFestivalDBContext context)
+        private static void getExecutive(StaticDataDBContext context)
         {
             context.Executive.AddOrUpdate(i => i.Title,
                 new Executive
@@ -139,7 +136,7 @@ namespace FSMFMVC.Migrations
             );
         }
 
-        private void getDonors(MusicFestivalDBContext context)
+        private void getDonors(StaticDataDBContext context)
         {
             context.Donor.AddOrUpdate(i => i.Title,
                 new Donor

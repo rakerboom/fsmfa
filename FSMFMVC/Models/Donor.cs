@@ -10,7 +10,7 @@ namespace FSMFMVC.Models
         [Required, StringLength(100)]
         public string Title { get; set; }
 
-        [Required, StringLength(10000), DataType(DataType.MultilineText)]
+        [Required, StringLength(2000), DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
         public string ImagePath { get; set; }

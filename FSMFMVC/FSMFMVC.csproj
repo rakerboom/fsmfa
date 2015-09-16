@@ -170,25 +170,50 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BiographiesController.cs" />
     <Compile Include="Controllers\DonorsController.cs" />
+    <Compile Include="Controllers\EntrantsController.cs" />
     <Compile Include="Controllers\ExecutivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509150411520_init.cs" />
-    <Compile Include="Migrations\201509150411520_init.Designer.cs">
-      <DependentUpon>201509150411520_init.cs</DependentUpon>
+    <Compile Include="Migrations\201509160425467_initial.cs" />
+    <Compile Include="Migrations\201509160425467_initial.Designer.cs">
+      <DependentUpon>201509160425467_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509150744097_donor.cs" />
-    <Compile Include="Migrations\201509150744097_donor.Designer.cs">
-      <DependentUpon>201509150744097_donor.cs</DependentUpon>
+    <Compile Include="Migrations\201509160430581_change.cs" />
+    <Compile Include="Migrations\201509160430581_change.Designer.cs">
+      <DependentUpon>201509160430581_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160439014_entrant.cs" />
+    <Compile Include="Migrations\201509160439014_entrant.Designer.cs">
+      <DependentUpon>201509160439014_entrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160547344_moreentrant.cs" />
+    <Compile Include="Migrations\201509160547344_moreentrant.Designer.cs">
+      <DependentUpon>201509160547344_moreentrant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160602076_useremail.cs" />
+    <Compile Include="Migrations\201509160602076_useremail.Designer.cs">
+      <DependentUpon>201509160602076_useremail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160627553_required.cs" />
+    <Compile Include="Migrations\201509160627553_required.Designer.cs">
+      <DependentUpon>201509160627553_required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160631482_range.cs" />
+    <Compile Include="Migrations\201509160631482_range.Designer.cs">
+      <DependentUpon>201509160631482_range.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509160633137_intnullable.cs" />
+    <Compile Include="Migrations\201509160633137_intnullable.Designer.cs">
+      <DependentUpon>201509160633137_intnullable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Biography.cs" />
     <Compile Include="Models\Donor.cs" />
-    <Compile Include="Models\DonorContext.cs" />
+    <Compile Include="Models\Entrant.cs" />
     <Compile Include="Models\Executive.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -223,6 +248,7 @@
     <Content Include="Images\Executive\SharonCameron.jpg" />
     <Content Include="Images\Executive\SharonHart.jpg" />
     <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logoFull.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -286,6 +312,11 @@
     <Content Include="Views\Donors\Details.cshtml" />
     <Content Include="Views\Donors\Edit.cshtml" />
     <Content Include="Views\Donors\Index.cshtml" />
+    <Content Include="Views\Entrants\Create.cshtml" />
+    <Content Include="Views\Entrants\Delete.cshtml" />
+    <Content Include="Views\Entrants\Details.cshtml" />
+    <Content Include="Views\Entrants\Edit.cshtml" />
+    <Content Include="Views\Entrants\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,11 +330,29 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509150411520_init.resx">
-      <DependentUpon>201509150411520_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509160425467_initial.resx">
+      <DependentUpon>201509160425467_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509150744097_donor.resx">
-      <DependentUpon>201509150744097_donor.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509160430581_change.resx">
+      <DependentUpon>201509160430581_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160439014_entrant.resx">
+      <DependentUpon>201509160439014_entrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160547344_moreentrant.resx">
+      <DependentUpon>201509160547344_moreentrant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160602076_useremail.resx">
+      <DependentUpon>201509160602076_useremail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160627553_required.resx">
+      <DependentUpon>201509160627553_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160631482_range.resx">
+      <DependentUpon>201509160631482_range.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509160633137_intnullable.resx">
+      <DependentUpon>201509160633137_intnullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
