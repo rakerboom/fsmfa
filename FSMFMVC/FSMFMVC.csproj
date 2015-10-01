@@ -254,6 +254,7 @@
     <Content Include="pdf\2014 Donor page.pdf" />
     <Content Include="pdf\2014 New Donor letter.pdf" />
     <Content Include="pdf\2014 Supporters letter 1.pdf" />
+    <None Include="Properties\PublishProfiles\fortsaskatchewanmusicfestival.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
