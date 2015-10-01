@@ -1,0 +1,8 @@
+First make changes in Migrations\Configuration.cs
+
+
+In the Package Manager Console window at the PM> prompt enter
+
+Enable-Migrations -ContextTypeName FSMFMVC.Models.StaticDataDBContext
+
+update-database
