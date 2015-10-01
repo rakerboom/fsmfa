@@ -25,6 +25,7 @@ namespace FSMFMVC.Models
         [StringLength(50)]
         public string Address { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string City { get; set; }
 
@@ -47,18 +48,22 @@ namespace FSMFMVC.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [Required]
         [Display(Name = "Grade In Music")]
         public int? GradeInMusic { get; set; }
 
         public int? Age { get; set; }
 
+        [Required]
         [StringLength(50)]
         [Display(Name = "Class Name")]
         public string ClassName { get; set; }
 
+        [Required]
         [Display(Name = "Class Number")]
         public int? ClassNumber { get; set; }
 
+        [Required]
         [StringLength(100)]
         [Display(Name = "Instrument(s)")]
         public string Instruments { get; set; }
@@ -68,8 +73,10 @@ namespace FSMFMVC.Models
         [DataType(DataType.MultilineText)]
         public string Selection { get; set; }
 
+        [Required]
         [Range(0, 240)]
         [DataType(DataType.Duration)]
+        [Display(Name = "Performance Time (In Minutes)")]
         public int? PerformanceTime { get; set; }
 
         [Display(Name = "Number Of Paricipants")]
@@ -80,15 +87,16 @@ namespace FSMFMVC.Models
         [DataType(DataType.MultilineText)]
         public string ParicipantsNames { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         [StringLength(100)]
         [Display(Name = "Name of Accompanist")]
         public string NameofAccompanist { get; set; }
 
+        [Required]
         [StringLength(50)]
         [Display(Name = "First Name")]
         public string MusicSupervisorsFirstName { get; set; }
 
+        [Required]
         [StringLength(50)]
         [Display(Name = "Last Name")]
         public string MusicSupervisorsLastName { get; set; }
@@ -119,7 +127,6 @@ namespace FSMFMVC.Models
         [DataType(DataType.PhoneNumber)]
         public string VolunteerPhone { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         [StringLength(200)]
         [Display(Name = "Special Requests")]
         [DataType(DataType.MultilineText)]
