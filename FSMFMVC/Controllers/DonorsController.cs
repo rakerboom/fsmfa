@@ -28,11 +28,18 @@ namespace FSMFMVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Donor donor = db.Donor.Find(id);
+            var d = from m in db.Donor2
+                    where m.donor_id == id
+                    select m;
+
             if (donor == null)
             {
                 return HttpNotFound();
             }
-            return View(donor);
+
+            ViewBag.level = donor.Title;
+
+            return View(db.Donor2.Where(u => u.donor_id == id).ToList());
         }
 
         // GET: Donors/Create

@@ -209,10 +209,35 @@
     <Compile Include="Migrations\201509160633137_intnullable.Designer.cs">
       <DependentUpon>201509160633137_intnullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510020033294_donorattack.cs" />
+    <Compile Include="Migrations\201510020033294_donorattack.Designer.cs">
+      <DependentUpon>201510020033294_donorattack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510020511507_donorattack2.cs" />
+    <Compile Include="Migrations\201510020511507_donorattack2.Designer.cs">
+      <DependentUpon>201510020511507_donorattack2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510020532553_donorattack3.cs" />
+    <Compile Include="Migrations\201510020532553_donorattack3.Designer.cs">
+      <DependentUpon>201510020532553_donorattack3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510020554472_donorattack4.cs" />
+    <Compile Include="Migrations\201510020554472_donorattack4.Designer.cs">
+      <DependentUpon>201510020554472_donorattack4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510020602523_donorattack5.cs" />
+    <Compile Include="Migrations\201510020602523_donorattack5.Designer.cs">
+      <DependentUpon>201510020602523_donorattack5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510020608386_donorattack6.cs" />
+    <Compile Include="Migrations\201510020608386_donorattack6.Designer.cs">
+      <DependentUpon>201510020608386_donorattack6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Biography.cs" />
     <Compile Include="Models\Donor.cs" />
+    <Compile Include="Models\Donor2.cs" />
     <Compile Include="Models\Entrant.cs" />
     <Compile Include="Models\Executive.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -357,6 +382,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509160633137_intnullable.resx">
       <DependentUpon>201509160633137_intnullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020033294_donorattack.resx">
+      <DependentUpon>201510020033294_donorattack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020511507_donorattack2.resx">
+      <DependentUpon>201510020511507_donorattack2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020532553_donorattack3.resx">
+      <DependentUpon>201510020532553_donorattack3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020554472_donorattack4.resx">
+      <DependentUpon>201510020554472_donorattack4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020602523_donorattack5.resx">
+      <DependentUpon>201510020602523_donorattack5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510020608386_donorattack6.resx">
+      <DependentUpon>201510020608386_donorattack6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

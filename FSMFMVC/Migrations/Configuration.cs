@@ -15,6 +15,7 @@ namespace FSMFMVC.Migrations
             getBiograhies(context);
             getExecutive(context);
             getDonors(context);
+            getDonors2(context);
         }
 
         private static void getBiograhies(StaticDataDBContext context)
@@ -167,6 +168,154 @@ namespace FSMFMVC.Migrations
                        Description = "up to $249.99",
                        ImagePath = "Bronze.png"
                    }
+            );
+        }
+
+        private void getDonors2(StaticDataDBContext context)
+        {
+            context.Donor2.AddOrUpdate(i => i.Title,
+                new Donor2
+                {
+                    ID = 1,
+                    donor_id = 1,//1 for Platinum
+                    Title = " FortSaskOnline",
+                    ImagePath = "ftskonline.png",
+                    link = "http://fortsaskonline.com"
+                },
+                new Donor2
+                {
+                    ID = 2,
+                    donor_id = 1,
+                    Title = "Mix 107.9",
+                    ImagePath = "mix1079.png",
+                    link = "http://fortsaskonline.com/mix-107"
+                },
+                 new Donor2
+                 {
+                     ID = 3,
+                     donor_id = 1,
+                     Title = "Royal Canadian Legion Branch No. 27",
+                     ImagePath = "royal-canadian-legion.png",
+                     link = "https://www.facebook.com/fortsask.legionbranch27"
+                 },
+                 new Donor2
+                {
+                    ID = 4,
+                    donor_id = 1,
+                    Title = "Fort Saskatchewan Lions Club",
+                    ImagePath = "lionsInternational.jpg",
+                    link = "http://www.lionsclubs.org/"
+                 },
+                new Donor2
+                {
+                    ID = 5,
+                    donor_id = 1,
+                    Title = "Music Enrichment Society of Fort Saskatchewan",
+                    ImagePath = "MusicEnrichmentSociety.png"
+                },
+                new Donor2
+                {
+                    ID = 6,
+                    donor_id = 2,
+                    Title = "Agrium",
+                    ImagePath = "agrium.png",
+                    link = "http://www.agrium.com/"
+                },
+                new Donor2
+                {
+                    ID = 7,
+                    donor_id = 2,
+                    Title = "Remax - Jennifer Pollack and Pam Tycholaz",
+                    ImagePath = "remax.jpg",
+                    link = "http://www.remax.ca/"
+                },
+                new Donor2
+                {
+                    ID = 8,
+                    donor_id = 2,
+                    Title = "Fort Saskatchewan Rotary Club",
+                    ImagePath = "rotaryClub.jpg",
+                    link = "www.clubrunner.ca/fortsaskatchewan/"
+                },
+                new Donor2
+                {
+                    ID = 9,
+                    donor_id = 2,
+                    Title = "Twice But Nice",
+                    ImagePath = "twiceButNice.png"
+                },
+                new Donor2
+                {
+                    ID = 10,
+                    donor_id = 2,
+                    Title = "Ketharine and Daniel Gessner"
+                },
+                new Donor2
+                {
+                    ID = 11,
+                    donor_id = 3,
+                    Title = "Alberta Royal Purple Lodges #212, Fort Sask. Branch"
+                },
+                new Donor2
+                {
+                    ID = 12,
+                    donor_id = 3,
+                    Title = "David and Freda Spearing"
+                },
+                new Donor2
+                {
+                    ID = 13,
+                    donor_id = 3,
+                    Title = "Fort Saskatchewan Community Band"
+                },
+                new Donor2
+                {
+                    ID = 14,
+                    donor_id = 3,
+                    Title = "Fotty Stevenson Wilson"
+                },
+                new Donor2
+                {
+                    ID = 15,
+                    donor_id = 3,
+                    Title = "Gaumont Financial Service"
+                },
+                new Donor2
+                {
+                    ID = 16,
+                    donor_id = 3,
+                    Title = "Moira Buck"
+                },
+                new Donor2
+                {
+                    ID = 17,
+                    donor_id = 3,
+                    Title = "Servus Credit Union"
+                },
+                new Donor2
+                {
+                    ID = 18,
+                    donor_id = 3,
+                    Title = "Sharon and Keith Cameron"
+                },
+                new Donor2
+                {
+                    ID = 19,
+                    donor_id = 3,
+                    Title = "Sherritt International Corp."
+                },
+                new Donor2
+                {
+                    ID = 20,
+                    donor_id = 3,
+                    Title = "Shirley Yakimets"
+                },
+                new Donor2
+                {
+                    ID = 21,
+                    donor_id = 3,
+                    Title = "Smith Insurance"
+                }
             );
         }
     }

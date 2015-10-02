@@ -21,6 +21,7 @@ namespace FSMFMVC.Models
         public DbSet<Biography> Biographies { get; set; }
         public DbSet<Executive> Executive { get; set; }
         public DbSet<Donor> Donor { get; set; }
+        public DbSet<Donor2> Donor2 { get; set; }
         public DbSet<Entrant> Entrants { get; set; }
     }
 }
