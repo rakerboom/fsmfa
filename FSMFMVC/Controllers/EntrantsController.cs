@@ -44,6 +44,10 @@ namespace FSMFMVC.Controllers
             {
                 return HttpNotFound();
             }
+            if (!entrant.UserEmail.Equals(User.Identity.Name))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             return View(entrant);
         }
 
@@ -87,6 +91,10 @@ namespace FSMFMVC.Controllers
             {
                 return HttpNotFound();
             }
+            if (!entrant.UserEmail.Equals(User.Identity.Name))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             return View(entrant);
         }
 
@@ -98,6 +106,15 @@ namespace FSMFMVC.Controllers
         [Authorize]
         public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,PhoneNumber,Address,City,Province,PostalCode,SchoolAttending,GradeInSchool,Email,GradeInMusic,Age,ClassName,ClassNumber,Instruments,Selection,PerformanceTime,NumberOfParicipants,ParicipantsNames,NameofAccompanist,MusicSupervisorsFirstName,MusicSupervisorsLastName,MusicSupervisorsPhone,MusicSupervisorsAlternatePhone,MusicSupervisorsEmail,VolunteerFirstName,VolunteerLastName,VolunteerPhone,SpecialRequests")] Entrant entrant)
         {
+            if (db.Entrants.AsNoTracking().Where(x => x.ID == entrant.ID && x.UserEmail.Equals(User.Identity.Name)).Count() == 0)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                entrant.UserEmail = User.Identity.Name;
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(entrant).State = EntityState.Modified;
@@ -120,6 +137,10 @@ namespace FSMFMVC.Controllers
             {
                 return HttpNotFound();
             }
+            if (!entrant.UserEmail.Equals(User.Identity.Name))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             return View(entrant);
         }
 
@@ -130,8 +151,11 @@ namespace FSMFMVC.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Entrant entrant = db.Entrants.Find(id);
-            db.Entrants.Remove(entrant);
-            db.SaveChanges();
+            if (entrant.UserEmail.Equals(User.Identity.Name))
+            {
+                db.Entrants.Remove(entrant);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 
